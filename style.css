@@ -17,10 +17,23 @@
     --card:rgba(255,255,255,0.08);
     --text:#ffffff;
     --accent:#38bdf8;
-    --secondary:#94a3b8;
     --border:rgba(255,255,255,0.15);
+    --para:#cbd5e1;
 
 }
+
+
+.light{
+
+    --bg:#f5f7fb;
+    --card:rgba(255,255,255,0.8);
+    --text:#111827;
+    --accent:#0284c7;
+    --border:rgba(0,0,0,0.1);
+    --para:#374151;
+
+}
+
 
 
 body{
@@ -32,6 +45,8 @@ body{
     color:var(--text);
 
     overflow-x:hidden;
+
+    transition:.4s;
 
 }
 
@@ -45,22 +60,17 @@ body{
 nav{
 
     position:fixed;
-
     top:0;
-
     left:0;
-
     width:100%;
 
     padding:20px 8%;
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
-    background:rgba(2,6,23,0.7);
+    background:rgba(2,6,23,.7);
 
     backdrop-filter:blur(15px);
 
@@ -100,7 +110,7 @@ nav ul a{
 
     text-decoration:none;
 
-    color:white;
+    color:var(--text);
 
     font-weight:500;
 
@@ -113,6 +123,24 @@ nav ul a{
 nav ul a:hover{
 
     color:var(--accent);
+
+}
+
+
+
+.theme-btn{
+
+    cursor:pointer;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:10px;
+
+    background:var(--card);
+
+    color:var(--text);
 
 }
 
@@ -153,7 +181,7 @@ nav ul a:hover{
 
     padding:45px;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.3);
+    max-width:900px;
 
     animation:fadeUp 1s ease;
 
@@ -174,6 +202,8 @@ nav ul a:hover{
     border:4px solid var(--accent);
 
     margin-bottom:20px;
+
+    box-shadow:0 0 30px rgba(56,189,248,.5);
 
 }
 
@@ -199,19 +229,13 @@ nav ul a:hover{
 
 
 
-.hero h3{
+.typing{
 
-    margin-top:10px;
-
-    font-size:1.5rem;
-
-}
-
-
-
-.tagline{
+    margin:15px 0;
 
     color:var(--accent);
+
+    font-size:1.5rem;
 
     font-weight:600;
 
@@ -225,40 +249,28 @@ nav ul a:hover{
 
     line-height:1.8;
 
-    color:#cbd5e1;
+    color:var(--para);
 
 }
 
 
 
 /* =========================
- BUTTONS
+ BUTTON
 ========================= */
 
 
-.buttons{
+.btn{
+
+    display:inline-block;
 
     margin-top:25px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-}
-
-
-
-.btn{
 
     padding:13px 30px;
 
     background:var(--accent);
 
-    color:#020617;
+    color:white;
 
     text-decoration:none;
 
@@ -277,18 +289,6 @@ nav ul a:hover{
     transform:translateY(-5px);
 
     box-shadow:0 10px 25px rgba(56,189,248,.4);
-
-}
-
-
-
-.outline{
-
-    background:transparent;
-
-    color:white;
-
-    border:2px solid var(--accent);
 
 }
 
@@ -387,7 +387,7 @@ section{
 
 
 /* =========================
- PROJECT CARDS
+ PROJECTS
 ========================= */
 
 
@@ -422,9 +422,9 @@ section{
 
 .card h3{
 
-    margin-bottom:15px;
-
     color:var(--accent);
+
+    margin-bottom:15px;
 
 }
 
@@ -432,7 +432,7 @@ section{
 
 .card p{
 
-    color:#cbd5e1;
+    color:var(--para);
 
     line-height:1.7;
 
@@ -443,9 +443,6 @@ section{
 .card:hover{
 
     transform:translateY(-10px);
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.4);
 
 }
 
@@ -502,29 +499,28 @@ footer{
 
 @keyframes fadeUp{
 
-    from{
+from{
 
-        opacity:0;
+opacity:0;
 
-        transform:translateY(40px);
+transform:translateY(40px);
 
-    }
+}
 
+to{
 
-    to{
+opacity:1;
 
-        opacity:1;
+transform:translateY(0);
 
-        transform:translateY(0);
-
-    }
+}
 
 }
 
 
 
 /* =========================
- MOBILE DESIGN
+ MOBILE RESPONSIVE
 ========================= */
 
 
@@ -533,35 +529,48 @@ footer{
 
 nav{
 
-    padding:18px 5%;
+padding:18px 5%;
 
 }
 
 
 nav ul{
 
-    display:none;
+display:none;
 
 }
+
 
 
 .hero h1{
 
-    font-size:2.5rem;
+font-size:2.3rem;
 
 }
+
+
+
+.profile-img{
+
+width:120px;
+
+height:120px;
+
+}
+
 
 
 .glass{
 
-    padding:30px 20px;
+padding:30px 20px;
 
 }
 
 
+
 section{
 
-    padding:80px 5%;
+padding:80px 5%;
 
 }
 
