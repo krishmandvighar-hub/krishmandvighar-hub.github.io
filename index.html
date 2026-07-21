@@ -6,333 +6,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Kris Mandvighar Data Analyst Portfolio - Python, SQL, Power BI, Excel and Data Visualization">
+
 <title>Kris Mandvighar | Data Analyst Portfolio</title>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-
-:root{
-
---bg:#0f172a;
---card:rgba(255,255,255,0.08);
---text:#ffffff;
---accent:#38bdf8;
---border:rgba(255,255,255,0.15);
-
-}
-
-
-.light{
-
---bg:#f5f7fb;
---card:rgba(255,255,255,0.8);
---text:#111827;
---accent:#0284c7;
---border:rgba(0,0,0,0.1);
-
-}
-
-
-
-body{
-
-background:var(--bg);
-color:var(--text);
-transition:0.4s;
-
-}
-
-
-
-nav{
-
-position:fixed;
-width:100%;
-top:0;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:var(--card);
-backdrop-filter:blur(20px);
-border-bottom:1px solid var(--border);
-z-index:1000;
-
-}
-
-
-
-.logo{
-
-font-size:1.4rem;
-font-weight:700;
-
-}
-
-
-
-nav ul{
-
-display:flex;
-list-style:none;
-gap:25px;
-
-}
-
-
-
-nav a{
-
-text-decoration:none;
-color:var(--text);
-font-weight:500;
-
-}
-
-
-
-.theme-btn{
-
-cursor:pointer;
-padding:10px 15px;
-border-radius:10px;
-background:var(--card);
-
-}
-
-
-
-.hero{
-
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-text-align:center;
-
-}
-
-
-
-.glass{
-
-background:var(--card);
-backdrop-filter:blur(20px);
-border:1px solid var(--border);
-border-radius:25px;
-padding:40px;
-max-width:900px;
-
-}
-
-
-
-.hero h1{
-
-font-size:4rem;
-font-weight:800;
-
-}
-
-
-
-.typing{
-
-font-size:1.4rem;
-color:var(--accent);
-font-weight:600;
-margin:15px 0;
-
-}
-
-
-
-.hero p{
-
-line-height:1.8;
-margin-top:10px;
-
-}
-
-
-
-.btn{
-
-display:inline-block;
-margin-top:20px;
-padding:14px 28px;
-background:var(--accent);
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:600;
-
-}
-
-
-
-section{
-
-padding:100px 10%;
-
-}
-
-
-
-.section-title{
-
-text-align:center;
-font-size:2rem;
-margin-bottom:40px;
-
-}
-
-
-
-.skills{
-
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-
-}
-
-
-
-.skill{
-
-padding:12px 20px;
-background:var(--card);
-border:1px solid var(--border);
-border-radius:25px;
-
-}
-
-
-
-.projects{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-
-}
-
-
-
-.card{
-
-background:var(--card);
-padding:25px;
-border-radius:20px;
-border:1px solid var(--border);
-transition:.3s;
-
-}
-
-
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-
-
-.contact p{
-
-margin:15px 0;
-
-}
-
-
-
-.contact a{
-
-color:var(--accent);
-text-decoration:none;
-
-}
-
-
-
-footer{
-
-text-align:center;
-padding:25px;
-border-top:1px solid var(--border);
-
-}
-
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 
 
 <body>
 
 
-
 <nav>
 
-
 <div class="logo">
-
 Kris Portfolio
-
 </div>
-
 
 
 <ul>
 
 <li><a href="#about">About</a></li>
-
 <li><a href="#skills">Skills</a></li>
-
 <li><a href="#projects">Projects</a></li>
-
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
 
-
-<div class="theme-btn" onclick="toggleTheme()">
-
+<button class="theme-btn" onclick="toggleTheme()">
 🌙
-
-</div>
+</button>
 
 
 </nav>
 
 
 
-
-
 <section class="hero">
+
 
 <div class="glass">
 
 
-<img src="profile.jpg" class="profile-img">
+<img src="profile.jpg" class="profile-img" alt="Kris Mandvighar Profile">
 
 
 <h1>
@@ -362,8 +84,8 @@ and building data-driven solutions.
 
 </div>
 
-</section>
 
+</section>
 
 
 
@@ -373,11 +95,8 @@ and building data-driven solutions.
 
 
 <h2 class="section-title">
-
 About Me
-
 </h2>
-
 
 
 <div class="glass">
@@ -406,45 +125,29 @@ better decisions.
 
 
 
-
 <section id="skills">
 
 
 <h2 class="section-title">
-
 Skills
-
 </h2>
-
 
 
 <div class="skills">
 
 
 <div class="skill">SQL</div>
-
 <div class="skill">Python</div>
-
 <div class="skill">Excel</div>
-
 <div class="skill">Power BI</div>
-
 <div class="skill">Pandas</div>
-
 <div class="skill">NumPy</div>
-
 <div class="skill">Matplotlib</div>
-
 <div class="skill">Seaborn</div>
-
 <div class="skill">Data Cleaning</div>
-
 <div class="skill">Data Analysis</div>
-
 <div class="skill">Data Visualization</div>
-
 <div class="skill">Statistics</div>
-
 <div class="skill">Dashboard Development</div>
 
 
@@ -458,26 +161,13 @@ Skills
 
 
 
-
 <section id="projects">
 
 
 <h2 class="section-title">
-
 Projects
-
 </h2>
 
-
-
-
-<section id="projects">
-
-<h2 class="section-title">
-
-Projects
-
-</h2>
 
 
 <div class="projects">
@@ -505,6 +195,7 @@ View GitHub
 
 </a>
 
+
 </div>
 
 
@@ -513,9 +204,11 @@ View GitHub
 
 <div class="card">
 
+
 <h3>
 IPL Dashboard Project
 </h3>
+
 
 <p>
 Analyzed IPL datasets and created dashboard
@@ -532,6 +225,7 @@ View GitHub
 
 </a>
 
+
 </div>
 
 
@@ -541,9 +235,11 @@ View GitHub
 
 <div class="card">
 
+
 <h3>
 HR Analytics Project
 </h3>
+
 
 <p>
 Created HR analytics dashboard to analyze
@@ -560,8 +256,8 @@ View GitHub
 
 </a>
 
-</div>
 
+</div>
 
 
 
@@ -580,9 +276,7 @@ View GitHub
 
 
 <h2 class="section-title">
-
 Contact
-
 </h2>
 
 
@@ -590,20 +284,17 @@ Contact
 <div class="glass contact">
 
 
-
 <p>
-
 💼 LinkedIn:
 
-<a href="https://www.linkedin.com/in/kris-mandvighar-419732400" target="_blank">
+<a href="https://www.linkedin.com/in/kris-mandvighar-419732400"
+target="_blank">
 
-linkedin.com/in/kris-mandvighar-419732400
+LinkedIn Profile
 
 </a>
 
-
 </p>
-
 
 
 
@@ -611,24 +302,20 @@ linkedin.com/in/kris-mandvighar-419732400
 
 💻 GitHub:
 
-<a href="https://github.com/krishmandvighar-hub" target="_blank">
+<a href="https://github.com/krishmandvighar-hub"
+target="_blank">
 
-github.com/krishmandvighar-hub
+GitHub Profile
 
 </a>
 
-
 </p>
-
 
 
 
 <p>
-
 📍 Mumbai, Maharashtra, India
-
 </p>
-
 
 
 </div>
@@ -640,19 +327,15 @@ github.com/krishmandvighar-hub
 
 
 
-
 <footer>
 
-
-© 2026 Kris Mandvighar | Data Analyst Portfolio
-
+© <span id="year"></span> Kris Mandvighar | Data Analyst Portfolio
 
 </footer>
 
 
 
 <script src="script.js"></script>
-
 
 
 </body>
