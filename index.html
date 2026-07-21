@@ -1,372 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kris Mandvighar | Data Analyst Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-:root{
---bg:#0f172a;
---card:rgba(255,255,255,0.08);
---text:#ffffff;
---accent:#38bdf8;
---border:rgba(255,255,255,0.15);
-}
-
-.light{
---bg:#f5f7fb;
---card:rgba(255,255,255,0.8);
---text:#111827;
---accent:#0284c7;
---border:rgba(0,0,0,0.1);
-}
-
-body{
-background:var(--bg);
-color:var(--text);
-transition:0.4s;
-}
-
-nav{
-position:fixed;
-width:100%;
-top:0;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:var(--card);
-backdrop-filter:blur(20px);
-border-bottom:1px solid var(--border);
-z-index:1000;
-}
-
-.logo{
-font-size:1.4rem;
-font-weight:700;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav a{
-text-decoration:none;
-color:var(--text);
-font-weight:500;
-}
-
-.theme-btn{
-cursor:pointer;
-padding:10px 15px;
-border-radius:10px;
-background:var(--card);
-}
-
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-text-align:center;
-}
-
-.glass{
-background:var(--card);
-backdrop-filter:blur(20px);
-border:1px solid var(--border);
-border-radius:25px;
-padding:40px;
-max-width:900px;
-}
-
-.hero h1{
-font-size:4rem;
-font-weight:800;
-}
-
-.typing{
-font-size:1.4rem;
-color:var(--accent);
-font-weight:600;
-margin:15px 0;
-}
-
-.hero p{
-line-height:1.8;
-margin-top:10px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 28px;
-background:var(--accent);
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:600;
-}
-
-section{
-padding:100px 10%;
-}
-
-.section-title{
-text-align:center;
-font-size:2rem;
-margin-bottom:40px;
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.skill{
-padding:12px 20px;
-background:var(--card);
-border:1px solid var(--border);
-border-radius:25px;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.card{
-background:var(--card);
-padding:25px;
-border-radius:20px;
-border:1px solid var(--border);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.contact p{
-margin:15px 0;
-}
-
-.contact a{
-color:var(--accent);
-text-decoration:none;
-}
-
-footer{
-text-align:center;
-padding:25px;
-border-top:1px solid var(--border);
-}
-
-</style>
 </head>
+
 
 <body>
 
+
+<!-- NAVBAR -->
+
 <nav>
-<div class="logo">Kris Portfolio</div>
+
+<div class="logo">
+Kris Portfolio
+</div>
+
 
 <ul>
+
 <li><a href="#about">About</a></li>
+
 <li><a href="#skills">Skills</a></li>
+
+<li><a href="#education">Education</a></li>
+
 <li><a href="#projects">Projects</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
-<div class="theme-btn" onclick="toggleTheme()">🌙</div>
+
 </nav>
+
+
+
+<!-- HERO SECTION -->
+
 
 <section class="hero">
 
+
 <div class="glass">
 
-<h1>Kris Mandvighar</h1>
 
-<div class="typing">
-<span id="typing-text"></span>
-</div>
+<img src="profile.jpg" class="profile-img">
 
-<p>
-Aspiring Data Analyst passionate about SQL, Python, Power BI,
-Excel, Data Visualization, Business Intelligence, and building
-data-driven solutions.
+
+<h1>
+Kris Mandvighar
+</h1>
+
+
+<h3>
+Aspiring Data Analyst
+</h3>
+
+
+<p class="tagline">
+
+Python Developer | SQL | Power BI | Data Visualization
+
 </p>
 
-<a href="Resume.pdf" class="btn" download>
-📄 Download Resume
+
+
+<p>
+
+Passionate Data Analytics learner focused on transforming
+raw data into meaningful insights using Python, SQL,
+Excel and Power BI.
+
+</p>
+
+
+
+<div class="buttons">
+
+
+<a href="Resume.pdf" download class="btn">
+Download Resume
 </a>
+
+
+<a href="https://www.linkedin.com/in/kris-mandvighar-419732400"
+target="_blank"
+class="btn outline">
+
+LinkedIn
+
+</a>
+
+
+<a href="https://github.com/krishmandvighar-hub"
+target="_blank"
+class="btn outline">
+
+GitHub
+
+</a>
+
 
 </div>
 
+
+</div>
+
+
 </section>
+
+
+
+
+
+<!-- ABOUT -->
+
 
 <section id="about">
 
-<h2 class="section-title">About Me</h2>
+
+<h2 class="section-title">
+About Me
+</h2>
+
 
 <div class="glass">
 
+
 <p>
-I am an aspiring Data Analyst with hands-on experience in SQL,
-Python, Power BI, Excel, Pandas, Data Cleaning, and Data
-Visualization. I enjoy transforming raw data into actionable
-insights and creating dashboards that help businesses make
-better decisions.
+
+I am an aspiring Data Analyst currently building skills
+in Python, SQL, Power BI, Excel and Data Visualization.
+
+I enjoy analyzing datasets, creating dashboards and
+finding insights that support better business decisions.
+
 </p>
+
 
 </div>
 
+
 </section>
+
+
+
+
+
+<!-- SKILLS -->
+
 
 <section id="skills">
 
-<h2 class="section-title">Skills</h2>
+
+<h2 class="section-title">
+Skills
+</h2>
+
+
 
 <div class="skills">
 
-<div class="skill">SQL</div>
+
 <div class="skill">Python</div>
-<div class="skill">Excel</div>
+
+<div class="skill">SQL</div>
+
 <div class="skill">Power BI</div>
+
+<div class="skill">Advanced Excel</div>
+
 <div class="skill">Pandas</div>
+
 <div class="skill">NumPy</div>
+
 <div class="skill">Matplotlib</div>
+
 <div class="skill">Seaborn</div>
+
 <div class="skill">Data Cleaning</div>
-<div class="skill">Data Analysis</div>
-<div class="skill">Data Visualization</div>
+
 <div class="skill">Statistics</div>
+
 <div class="skill">Dashboard Development</div>
+
+<div class="skill">Data Visualization</div>
 
 
 </div>
 
+
 </section>
 
-<section id="projects">
 
-<h2 class="section-title">Projects</h2>
+
+
+
+
+
+<!-- EDUCATION -->
+
+
+<section id="education">
+
+
+<h2 class="section-title">
+Education
+</h2>
+
 
 <div class="projects">
 
-<div class="card">
-<h3>Blinkit Store Analysis</h3>
-<p>Performed data cleaning, visualization, and business insights using Python.</p>
-</div>
 
 <div class="card">
-<h3>SQL Database Project</h3>
-<p>Worked on Joins, Subqueries, CRUD Operations, Views, and Aggregations.</p>
+
+<h3>
+Bachelor of Computer Applications (BCA)
+</h3>
+
+
+<p>
+Manglayatan University
+</p>
+
+
 </div>
+
+
 
 <div class="card">
-<h3>Power BI Dashboard</h3>
-<p>Built interactive dashboards and KPI reports for business analysis.</p>
+
+<h3>
+Data Analytics Course
+</h3>
+
+
+<p>
+Learning Python, SQL, Excel, Power BI,
+Pandas and Data Visualization.
+</p>
+
+
 </div>
 
 
 
 </div>
+
 
 </section>
+
+
+
+
+
+
+
+<!-- PROJECTS -->
+
+
+<section id="projects">
+
+
+<h2 class="section-title">
+Projects
+</h2>
+
+
+
+<div class="projects">
+
+
+
+<div class="card">
+
+<h3>
+Blinkit Data Analysis
+</h3>
+
+
+<p>
+
+Performed data cleaning and exploratory analysis
+using Python, Pandas and visualization libraries.
+
+</p>
+
+
+<a href="#" class="project-btn">
+View Project
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+HR Analytics Dashboard
+</h3>
+
+
+<p>
+
+Created Power BI dashboard analyzing employee
+attrition, salary trends, departments and workforce insights.
+
+</p>
+
+
+<a href="#" class="project-btn">
+View Project
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h3>
+IPL Data Analysis
+</h3>
+
+
+<p>
+
+Analyzed IPL datasets to discover player,
+team performance and match insights using Python.
+
+</p>
+
+
+<a href="#" class="project-btn">
+View Project
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CERTIFICATES -->
+
+
+<section>
+
+
+<h2 class="section-title">
+Certificates
+</h2>
+
+
+<div class="glass">
+
+
+<p>
+
+✔ Data Analytics Training Certificate
+
+<br>
+
+✔ Python Programming Certificate
+
+<br>
+
+✔ Microsoft Power BI Learning Certificate
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
 
 <section id="contact">
 
-<h2 class="section-title">Contact</h2>
+
+<h2 class="section-title">
+Contact
+</h2>
+
 
 <div class="glass contact">
 
-<p>
-💼 LinkedIn:
-<a href="https://www.linkedin.com/in/kris-mandvighar-419732400" target="_blank">
-linkedin.com/in/kris-mandvighar-419732400
-</a>
-</p>
 
 <p>
-💻 GitHub:
-<a href="https://github.com/krishmandvighar-hub" target="_blank">
-github.com/krishmandvighar-hub
-</a>
+📍 Mumbai, Maharashtra, India
 </p>
 
-<p>📍 Mumbai, Maharashtra, India</p>
+
+<p>
+
+LinkedIn:
+
+<a href="https://www.linkedin.com/in/kris-mandvighar-419732400"
+target="_blank">
+
+Profile
+
+</a>
+
+</p>
+
+
+
+<p>
+
+GitHub:
+
+<a href="https://github.com/krishmandvighar-hub"
+target="_blank">
+
+Profile
+
+</a>
+
+</p>
+
+
 
 </div>
 
+
 </section>
 
+
+
+
+
+
 <footer>
+
 © 2026 Kris Mandvighar | Data Analyst Portfolio
+
 </footer>
 
-<script>
 
-const roles = [
-"Data Analyst",
-"SQL Developer",
-"Python Enthusiast",
-"Power BI Learner",
-];
-
-let i = 0;
-let j = 0;
-let deleting = false;
-
-function typeEffect(){
-
-const current = roles[i];
-const text = document.getElementById("typing-text");
-
-if(!deleting){
-text.textContent = current.substring(0,j++);
-}else{
-text.textContent = current.substring(0,j--);
-}
-
-if(j === current.length + 1){
-deleting = true;
-setTimeout(typeEffect,1000);
-return;
-}
-
-if(j === 0){
-deleting = false;
-i = (i + 1) % roles.length;
-}
-
-setTimeout(typeEffect,deleting ? 50 : 120);
-}
-
-typeEffect();
-
-function toggleTheme(){
-document.body.classList.toggle("light");
-}
-
-</script>
 
 </body>
+
 </html>
