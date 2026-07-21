@@ -22,6 +22,10 @@ const typingText = document.getElementById("typing-text");
 
 function typingEffect(){
 
+
+    if(!typingText) return;
+
+
     let currentRole = roles[roleIndex];
 
 
@@ -31,7 +35,6 @@ function typingEffect(){
         currentRole.substring(0,charIndex++);
 
     }
-
     else{
 
         typingText.textContent =
@@ -45,7 +48,7 @@ function typingEffect(){
 
         setTimeout(()=>{
 
-            isDeleting = true;
+            isDeleting=true;
 
         },1200);
 
@@ -53,15 +56,15 @@ function typingEffect(){
 
 
 
-    if(isDeleting && charIndex === 0){
+    if(isDeleting && charIndex===0){
 
-        isDeleting = false;
+        isDeleting=false;
 
         roleIndex++;
 
-        if(roleIndex === roles.length){
+        if(roleIndex===roles.length){
 
-            roleIndex = 0;
+            roleIndex=0;
 
         }
 
@@ -78,6 +81,41 @@ function typingEffect(){
 
 typingEffect();
 
+
+
+
+
+
+// ===============================
+// Dark / Light Theme
+// ===============================
+
+
+function toggleTheme(){
+
+    document.body.classList.toggle("light");
+
+}
+
+
+
+
+
+
+
+// ===============================
+// Footer Year
+// ===============================
+
+
+const year = document.getElementById("year");
+
+
+if(year){
+
+    year.textContent = new Date().getFullYear();
+
+}
 
 
 
@@ -117,12 +155,9 @@ entry.target.style.transform="translateY(0)";
 
 
 },
-
 {
 threshold:0.15
 }
-
-
 
 );
 
@@ -142,7 +177,6 @@ observer.observe(card);
 
 
 });
-
 
 
 
@@ -169,12 +203,14 @@ let current="";
 sections.forEach(section=>{
 
 
-const sectionTop = section.offsetTop - 150;
+const sectionTop =
+section.offsetTop - 150;
 
 
 if(scrollY >= sectionTop){
 
-current = section.getAttribute("id");
+current =
+section.getAttribute("id");
 
 }
 
@@ -186,13 +222,13 @@ current = section.getAttribute("id");
 navLinks.forEach(link=>{
 
 
-link.style.color="white";
+link.style.color="";
 
 
-if(link.getAttribute("href")==="#"+current){
+if(link.getAttribute("href")
+===" #"+current){
 
 link.style.color="#38bdf8";
-
 
 }
 
@@ -207,13 +243,14 @@ link.style.color="#38bdf8";
 
 
 
-
 // ===============================
 // Button Ripple Effect
 // ===============================
 
 
-const buttons = document.querySelectorAll(".btn");
+const buttons =
+document.querySelectorAll(".btn");
+
 
 
 buttons.forEach(button=>{
@@ -252,7 +289,7 @@ ripple.remove();
 
 
 // ===============================
-// Page Loading Animation
+// Page Load Animation
 // ===============================
 
 
