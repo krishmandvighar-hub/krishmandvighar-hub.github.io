@@ -232,12 +232,58 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; }
 .timeline-content h3 { font-size: 19px; margin-bottom: 8px; }
 .timeline-content p { color: var(--muted); font-size: 14.5px; margin-top: 6px; }
 
-/* Certifications */
+/* ==========================================
+   CERTIFICATION CARDS
+   Paste at the very end of style.css
+========================================== */
 
-.empty-card { max-width: 640px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
-.empty-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 22px; margin-bottom: 16px; }
-.empty-card h3 { font-size: 20px; margin-bottom: 8px; }
-.empty-card p { color: var(--muted); }
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 8px;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.cert-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--accent); }
+
+.cert-icon {
+    width: 48px; height: 48px;
+    display: grid; place-items: center;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.cert-icon.powerbi { background: rgba(242, 200, 17, 0.18); color: #c99a00; }
+.cert-icon.excel { background: rgba(33, 115, 70, 0.14); color: #217346; }
+
+.cert-card h3 { font-size: 18px; line-height: 1.45; margin-bottom: 6px; }
+.cert-issuer { font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 14px; }
+.cert-meta { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--muted); margin-bottom: 6px; overflow-wrap: anywhere; }
+.cert-meta i { width: 14px; text-align: center; flex-shrink: 0; }
+.cert-card .project-link { margin-top: auto; padding-top: 14px; }
+
+body.dark-theme .cert-icon.powerbi { color: #f4d45b; }
+body.dark-theme .cert-icon.excel { color: #5fd391; }
+
+@media (max-width: 1024px) {
+    .cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .cert-grid { grid-template-columns: 1fr; }
+    .cert-card { padding: 23px; }
+}
 
 /* Contact */
 
