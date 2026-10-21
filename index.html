@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Kris Mandvighar">
+    <meta name="description" content="Explore Kris Mandvighar's data analytics portfolio featuring Power BI dashboards, SQL practice, Python data analysis, Excel, and business intelligence projects.">
+    <meta name="keywords" content="Kris Mandvighar, Data Analyst Portfolio, Power BI, SQL, Python, Excel, Pandas, Data Visualization, Business Intelligence">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kris Mandvighar | Data Analytics Portfolio">
+    <meta property="og:description" content="Data analytics projects, technical skills, education, and learning journey of Kris Mandvighar.">
+    <meta property="og:url" content="https://krishmandvighar-hub.github.io/">
+
+    <title>Kris Mandvighar | Data Analytics Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+
+    <!-- Fonts and icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Keep this filename aligned with your CSS file. -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Enables reveal effects only when JavaScript is available.
+        document.documentElement.classList.add('js');
+        // Safety net: if script.js fails to load, show all content anyway.
+        setTimeout(function () {
+            if (!document.documentElement.classList.contains('js-ready')) {
+                document.documentElement.classList.remove('js');
+            }
+        }, 2000);
+    </script>
+</head>
+<body>
+    <script>
+        // Apply saved theme immediately to avoid a light-mode flash.
+        try { if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark-theme"); } catch (e) {}
+    </script>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- ==================== SITE NAVIGATION ==================== -->
+    <header class="header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="#home" aria-label="Kris Mandvighar home">Kris<span>.</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" type="button"
+                    aria-label="Switch to dark mode" aria-pressed="false" title="Toggle colour theme">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="menu-btn" id="menuBtn" type="button"
+                    aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <p class="eyebrow">DATA ANALYTICS · BHAYANDAR, MUMBAI, INDIA</p>
+                    <h1 id="hero-title">Turning data into <span>meaningful insights.</span></h1>
+                    <p class="hero-description">
+                        Hi, I'm Kris Mandvighar, a first-year Bachelor of Computer Applications (BCA)
+                        student developing practical skills in data analytics and business intelligence.
+                        I use tools such as SQL, Python, Power BI and Excel to explore datasets,
+                        understand trends and communicate findings clearly.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a class="btn btn-primary" href="#projects">
+                            Explore My Projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-secondary" href="Resume.pdf" download>
+                            Download Resume <i class="fa-solid fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="social-links" role="group" aria-label="Social and contact links">
+                        <a href="https://github.com/krishmandvighar-hub" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kris-mandvighar-419732400" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:krishmandvighar@gmail.com" aria-label="Send email" title="Email">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal" aria-hidden="true">
+                    <div class="data-card">
+                        <div class="card-top">
+                            <span>DATA INSIGHTS</span>
+                            <span class="status"><span></span> EXPLORING</span>
+                        </div>
+                        <div class="chart">
+                            <div class="bar bar-1"></div>
+                            <div class="bar bar-2"></div>
+                            <div class="bar bar-3"></div>
+                            <div class="bar bar-4"></div>
+                            <div class="bar bar-5"></div>
+                            <div class="bar bar-6"></div>
+                            <div class="bar bar-7"></div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span>
+                            <span>MAY</span><span>JUN</span><span>JUL</span>
+                        </div>
+                        <div class="metric">
+                            <div><small>ANALYTICAL FOCUS</small><strong>From data to insight</strong></div>
+                            <div class="metric-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT ==================== -->
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">ABOUT ME</p>
+                    <h2 id="about-title">Curiosity, problem-solving and <span>data-driven thinking.</span></h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>
+                            I'm Kris Mandvighar, a first-year BCA student at Mangalayatan University
+                            studying through its online learning mode. Alongside my degree, I'm building
+                            a foundation in data analytics, reporting and business intelligence.
+                        </p>
+                        <p>
+                            My learning focuses on preparing data, writing SQL queries, exploring datasets
+                            with Python, and presenting findings through Power BI dashboards and Excel reports.
+                            I enjoy working with charts and using visual analysis to make information easier to understand.
+                        </p>
+                        <p>
+                            My portfolio includes practice and project work across retail, sales, human resources,
+                            customer data and sports analytics. Each project helps me improve my technical workflow:
+                            understand the question, inspect the data, analyze patterns and explain the results.
+                        </p>
+                        <p>
+                            I'm continuing to strengthen my fundamentals through coursework and hands-on practice,
+                            with the long-term goal of growing into a skilled data analytics professional.
+                        </p>
+                    </div>
+
+                    <div class="about-stats reveal" role="group" aria-label="Portfolio overview">
+                        <div class="stat-card"><strong>07</strong><span>Featured Projects</span></div>
+                        <div class="stat-card"><strong>4+</strong><span>Core Analytics Tools</span></div>
+                        <div class="stat-card"><strong>BCA</strong><span>2026 – Present</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS ==================== -->
+        <section class="section section-dark" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">TECHNICAL SKILLS</p>
+                    <h2 id="skills-title">Tools for <span>working with data.</span></h2>
+                    <p class="heading-description">
+                        My current toolkit for data preparation, analysis, querying and visualization.
+                        These skills are being developed through study and portfolio practice.
+                    </p>
+                </div>
+
+                <h3 class="skills-category reveal">Core Analytics Tools</h3>
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon python"><i class="fa-brands fa-python" aria-hidden="true"></i></div>
+                        <h3>Python</h3><p>Basic scripting and dataset analysis</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                        <h3>SQL</h3><p>Filtering, sorting, joins and aggregations</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-file-excel" aria-hidden="true"></i></div>
+                        <h3>Advanced Excel</h3><p>Data organization, formulas and reporting</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon powerbi"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></div>
+                        <h3>Power BI</h3><p>Data modeling, measures and dashboards</p>
+                    </article>
+                </div>
+
+                <h3 class="skills-category reveal">Python Libraries</h3>
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon pandas"><span aria-hidden="true">PD</span></div>
+                        <h3>Pandas</h3><p>Data cleaning and tabular data manipulation</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon numpy"><span aria-hidden="true">NP</span></div>
+                        <h3>NumPy</h3><p>Numerical calculations and arrays</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon matplotlib"><i class="fa-solid fa-chart-area" aria-hidden="true"></i></div>
+                        <h3>Matplotlib</h3><p>Creating charts and visual summaries</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon matplotlib"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                        <h3>Seaborn</h3><p>Statistical charts and visual exploration</p>
+                    </article>
+                </div>
+
+                <h3 class="skills-category reveal">Analytics Concepts</h3>
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-broom" aria-hidden="true"></i></div>
+                        <h3>Data Cleaning</h3><p>Checking and preparing data for analysis</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div>
+                        <h3>Exploratory Data Analysis</h3><p>Investigating patterns, distributions and trends</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div>
+                        <h3>Data Visualization</h3><p>Presenting information through clear visuals</p>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+                        <h3>Dashboard Development</h3><p>Building interactive reports for analysis</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS ==================== -->
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">PROJECT PORTFOLIO</p>
+                    <h2 id="projects-title">Learning by <span>building.</span></h2>
+                    <p class="heading-description">
+                        Selected practice and portfolio projects using Python, SQL and Power BI.
+                        Open a repository to explore the available project files and work.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-number">01</div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
+                            <h3>Blinkit Store Data Analysis</h3>
+                            <p>Used Python and Pandas to inspect and analyze a retail dataset, explore outlet and product patterns, and practice exploratory data analysis.</p>
+                            <div class="tags"><span>Python</span><span>Pandas</span><span>EDA</span></div>
+                            <a class="project-link" href="https://github.com/krishmandvighar-hub/Blinkit-Store-Data-Analysis-Project" target="_blank" rel="noopener noreferrer">View Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-number">02</div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></div>
+                            <h3>IPL Dashboard</h3>
+                            <p>Built an interactive Power BI report to explore IPL match information, team performance, player statistics and trends across seasons.</p>
+                            <div class="tags"><span>Power BI</span><span>Sports Analytics</span><span>Dashboard</span></div>
+                            <a class="project-link" href="https://github.com/krishmandvighar-hub/IPL-DASHBOARD-PROJECT" target="_blank" rel="noopener noreferrer">View Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-number">03</div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+                            <h3>HR Analytics Dashboard</h3>
+                            <p>Created a Power BI dashboard exploring workforce demographics, employee attrition and HR-related patterns to practice people analytics.</p>
+                            <div class="tags"><span>Power BI</span><span>HR Analytics</span><span>Data Modeling</span></div>
+                            <a class="project-link" href="https://github.com/krishmandvighar-hub/HR_ANALYTICS_PROJECT" target="_blank" rel="noopener noreferrer">View Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-number">04</div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-store" aria-hidden="true"></i></div>
+                            <h3>Shakti Store Sales Dashboard</h3>
+                            <p>Designed a Power BI sales report to explore sales performance, product trends and business metrics through interactive visuals.</p>
+                            <div class="tags"><span>Power BI</span><span>Sales Analytics</span><span>Visualization</span></div>
+                            <a class="project-link" href="https://github.com/krishmandvighar-hub/PowerBI_Project" target="_blank" rel="noopener noreferrer">View Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-number">05</div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-user-group" aria-hidden="true"></i></div>
+                            <h3>Customer Data Analysis</h3>
+                            <p>Practiced analyzing customer data to explore purchasing patterns, compare customer groups and summarize observations from a dataset.</p>
+                            <div class="tags"><span>Python</span><span>Customer Analytics</span><span>EDA</span></div>
+                            <a class="project-link" href="https://github.com/krishmandvighar-hub/Analysis_Projects/blob/main/Projects/Customer_Analysis.ipynb" target="_blank" rel="noopener noreferrer">View Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-number">06</div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></div>
+                            <h3>Flipkart Store Project</h3>
+                            <p>Explored product and store information in a Power BI project, using charts to review category patterns and product-level performance.</p>
+                            <div class="tags"><span>Power BI</span><span>Retail Analytics</span><span>Dashboard</span></div>
+                            <a class="project-link" href="https://github.com/krishmandvighar-hub/Flip-kart-Store-Project" target="_blank" rel="noopener noreferrer">View Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-number">07</div>
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                            <h3>SQL Study &amp; Query Practice</h3>
+                            <p>Practice work focused on writing SQL queries to retrieve and summarize structured data using filters, aggregate functions, joins and subqueries.</p>
+                            <div class="tags"><span>SQL</span><span>Queries</span><span>Data Analysis</span></div>
+                            <a class="project-link" href="https://github.com/krishmandvighar-hub/SQL_Study" target="_blank" rel="noopener noreferrer">View Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EDUCATION & DEVELOPMENT ==================== -->
+        <section class="section section-light" id="experience" aria-labelledby="journey-title">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">EDUCATION &amp; DEVELOPMENT</p>
+                    <h2 id="journey-title">My learning <span>journey.</span></h2>
+                    <p class="heading-description">Building academic foundations while developing practical analytics skills.</p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2026 – Present</span>
+                            <h3>Bachelor of Computer Applications (BCA)</h3>
+                            <p>Mangalayatan University · Online Learning</p>
+                            <p>Studying computer fundamentals, programming, mathematics, management information systems and related subjects.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024</span>
+                            <h3>Higher Secondary Certificate (HSC)</h3>
+                            <p>St Joseph A.M. High School &amp; Junior College · 86.3%</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2022</span>
+                            <h3>Secondary School Certificate (SSC)</h3>
+                            <p>St Joseph A.M. High School &amp; Junior College · 83.6%</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Ongoing</span>
+                            <h3>Independent Analytics Practice</h3>
+                            <p>Continuously practicing SQL, Python, Excel and Power BI by working through datasets, creating reports and improving project documentation.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CERTIFICATIONS ==================== -->
+        <section class="section" id="certifications" aria-labelledby="certifications-title">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">CERTIFICATIONS &amp; TRAINING</p>
+                    <h2 id="certifications-title">Learning and <span>credentials.</span></h2>
+                    <p class="heading-description">Training that supports my ongoing development in analytics and computer applications.</p>
+                </div>
+
+                <div class="empty-card reveal">
+                    <div class="empty-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                    <h3>Data Analytics &amp; Visualization</h3>
+                    <p>Completed training in data analytics and visualization through St Francis Computer Institute.</p>
+                    <p>Also completed MS-CIT / MS Office computer training.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="container contact-content reveal">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h2 id="contact-title">Let's connect and <span>talk data.</span></h2>
+                <p>
+                    I'm interested in learning opportunities, entry-level data analytics roles,
+                    project collaboration and conversations about data visualization and business intelligence.
+                </p>
+                <a class="btn btn-primary" href="mailto:krishmandvighar@gmail.com">
+                    Email Me <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+                <div class="contact-socials" role="group" aria-label="More ways to connect">
+                    <a href="https://github.com/krishmandvighar-hub" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kris-mandvighar-419732400" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Kris Mandvighar. All rights reserved.</p>
+            <p>Built with curiosity, consistency and data.</p>
+        </div>
+    </footer>
+
+    <!-- Keep this filename aligned with your JavaScript file. -->
+    <script src="script.js" defer></script>
+</body>
+</html>
