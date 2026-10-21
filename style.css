@@ -434,7 +434,8 @@ body.dark-theme .skill-icon.matplotlib { color: #ffb27c; }
     .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 560px) {
+/* FIX: was max-width: 560px, which left 561–600px showing 2 columns */
+@media (max-width: 600px) {
     .container { width: calc(100% - 32px); }
     .logo { font-size: 21px; }
     .theme-toggle, .menu-btn { width: 38px; height: 38px; }
