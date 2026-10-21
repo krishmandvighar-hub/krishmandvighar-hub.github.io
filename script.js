@@ -10,20 +10,28 @@
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Tells the <head> safety net that this script loaded successfully.
+    document.documentElement.classList.add("js-ready");
+
     const body = document.body;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     /* ---------- 1. THEME ---------- */
     const themeToggle = document.getElementById("themeToggle");
     const themeIcon = themeToggle ? themeToggle.querySelector("i") : null;
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
 
     try {
         if (localStorage.getItem("theme") === "dark") body.classList.add("dark-theme");
     } catch (e) { /* storage unavailable */ }
 
     function updateThemeIcon() {
-        if (!themeToggle) return;
         const isDark = body.classList.contains("dark-theme");
+
+        // Match the mobile browser bar colour to the current theme.
+        if (themeMeta) themeMeta.setAttribute("content", isDark ? "#0b1220" : "#ffffff");
+
+        if (!themeToggle) return;
         if (themeIcon) {
             themeIcon.classList.toggle("fa-sun", isDark);
             themeIcon.classList.toggle("fa-moon", !isDark);
